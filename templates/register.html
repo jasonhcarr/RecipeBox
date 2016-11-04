@@ -1,0 +1,29 @@
+<div class='register'>
+  <form ng-submit="registerSubmit()" action='#' method='post'>
+    <p>
+      <label for='user-name-reg'>Nickname</label>
+      <input ng-required="true" class='text-input' id='user-name-reg' name='user-name-reg' type='text'>
+      <span class='requirement-right'>user name must have at least 5 characters</span>
+    </p>
+    <p>
+      <label for='email'>User Email</label>
+      <span class='requirement-left'>Invalid email address</span>
+      <input ng-required="true" class='text-input' id='email' name='email' type='email'>
+      <span class='requirement-right'>Keep going</span>
+    </p>
+    <p>
+      <label for='password'>Password</label>
+      <span class='requirement-left'>Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
+      <input ng-required="true" class='text-input password' name='password' type='password'>
+      <span class='requirement-right'>Enter a password longer than 6 characters</span>
+    </p>
+    <p>
+      <label for='confirm-password'>Confirm Password</label>
+      <input ng-required="true" class='text-input' id='confirm-password' name='confirm-password' type='password'>
+      <span class='requirement-left'>Please confirm your password</span>
+    </p>
+    <p>
+      <input id='submit-register' type='submit' value='REGISTER'>
+    </p>
+  </form>
+</div>

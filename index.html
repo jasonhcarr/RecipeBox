@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app='RecipeBox'>
+  <head>
+    <meta charset="utf-8">
+    <title>Recipe Call</title>
+  </head>
+  <body>
+    <header>
+      <h1>RecipeBox</h1>
+    </header>
+    <div class="main-container">
+      <ui-view></ui-view>
+    </div>
+    <script src="./js/vendor/jquery-3.1.1.min.js"></script>
+    <script src="./node_modules/angular/angular.js"></script>
+    <script src="./node_modules/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="./js/app.js"></script>
+    <script src="./js/controllers/welcome.controller.js"></script>
+    <script src="./js/controllers/login.controller.js"></script>
+    <script src="./js/controllers/register.controller.js"></script>
+    <script src="./js/controllers/recipe-box.controller.js"></script>
+    <script src="./js/services/entry.service.js"></script>
+  </body>
+</html>

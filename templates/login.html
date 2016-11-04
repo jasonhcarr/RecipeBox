@@ -1,0 +1,19 @@
+<div class='login'>
+  <form ng-submit="loginSubmit()" action='#' method='post'>
+    <p>
+      <label for='user-name-login'>User Name</label>
+      <input ng-required="true" ng-model="login.name"
+      ng-keydown="" id='user-name-login' name='user-name-login' type='text'>
+      <span class='requirement-right'>Enter your user name</span>
+    </p>
+    <p>
+      <label for='password'>Password</label>
+      <span class='requirement-right'>Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
+      <input ng-required="true" ng-model="login.password" class='text-input password' name='password' type='password'>
+      <span class='requirement-left'>Enter a password longer than 6 characters</span>
+    </p>
+    <p>
+      <input id='submit-login' type='submit' value='LOGIN'>
+    </p>
+  </form>
+</div>
