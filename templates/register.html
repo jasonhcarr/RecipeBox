@@ -1,29 +1,28 @@
-<div class='register'>
-  <form ng-submit="registerSubmit()" action='#' method='post'>
+<div class="register">
+  <form ng-submit="registerSubmit()">
     <p>
-      <label for='user-name-reg'>Nickname</label>
-      <input ng-required="true" class='text-input' id='user-name-reg' name='user-name-reg' type='text'>
-      <span class='requirement-right'>user name must have at least 5 characters</span>
+      <label for="nickname">Nickname</label>
+      <input ng-model="register.name" ng-required="true" class="text-input" type="text">
+      <span ng-show="!validUserName()" class="requirement-right">user name must have at least 5 characters</span>
     </p>
     <p>
-      <label for='email'>User Email</label>
-      <span class='requirement-left'>Invalid email address</span>
-      <input ng-required="true" class='text-input' id='email' name='email' type='email'>
-      <span class='requirement-right'>Keep going</span>
+      <label for="email">User Email</label>
+      <span ng-show="!validEmail()" class="requirement-left">Invalid email address</span>
+      <input ng-required="true" class="register-email" ng-model="register.email" type="email">
     </p>
     <p>
-      <label for='password'>Password</label>
-      <span class='requirement-left'>Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
-      <input ng-required="true" class='text-input password' name='password' type='password'>
-      <span class='requirement-right'>Enter a password longer than 6 characters</span>
+      <label for="password">Password</label>
+      <span ng-show="!validPassword" class="requirement-left">Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
+      <input ng-required="true" class="register-password" name="password" type="password">
+      <span ng-show="!validPassword()" class="requirement-right">Enter a password longer than 6 characters</span>
     </p>
     <p>
-      <label for='confirm-password'>Confirm Password</label>
-      <input ng-required="true" class='text-input' id='confirm-password' name='confirm-password' type='password'>
-      <span class='requirement-left'>Please confirm your password</span>
+      <label for="confirm-password">Confirm Password</label>
+      <input ng-required="true" class="confirm-password" type="password">
+      <span ng-show="!validPassword()" class="requirement-left">Please confirm your password</span>
     </p>
     <p>
-      <input id='submit-register' type='submit' value='REGISTER'>
+      <input id="submit-register" type="submit" value="REGISTER">
     </p>
   </form>
 </div>

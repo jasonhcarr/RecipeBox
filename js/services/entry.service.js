@@ -1,8 +1,8 @@
-RecipeBox.service('EntryService', function () {
+RecipeBox.service('EntryService', function ($http, $state) {
   function submitInfo() {
     $http({
 method: 'GET',
-url: '/someUrl'
+url: 'https://recipe-box-api2.herokuapp.com/authenticate'
 }).then(function successCallback(response) {
   $state.go('recipe-box.box');
 }, function errorCallback(response) {

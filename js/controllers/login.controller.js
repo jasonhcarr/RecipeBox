@@ -1,6 +1,6 @@
 RecipeBox.controller('LoginController', function ($scope, $state, EntryService) {
   $scope.loginSubmit = function () {
-    console.log(login);
-    EntryService.submit(login);
+    console.log($scope.login);
+    EntryService.submit($scope.login);
   };
 });
