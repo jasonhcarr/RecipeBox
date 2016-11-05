@@ -23,5 +23,9 @@ RecipeBox.config(function($stateProvider, $urlRouterProvider) {
         url: 'recipe-box',
         templateUrl: './templates/recipe-box.html',
         controller: 'RecipeBoxController'
+  }).state('recipe-box.search', {
+        url: 'search',
+        templateUrl: './templates/search.html',
+        controller: 'SearchController'
     });
 });

@@ -1,11 +1,58 @@
 <div class="search-container">
-  <aside class="search-input-conatiner">
+  <aside class="search-input-container">
     <input ng-model="search.input" type="text" value="Search">
-    <input ng-click="searchForRecipes()" type="submit" value="Search Recipes">
+    <input ng-click="searchForRecipes(search.input)" type="button" value="Search Recipes">
   </aside>
   <div class="results-container">
      <section ng-repeat="result in results" class="result">
-       <!-- insert recipe template here -->
+       <ul class="recipe-card">
+         <span class="tab">
+           <input type="text">{{result.name}}</input>
+         </span>
+         <form name="new-recipe" method="POST">
+           <li class="recipe-line"></li>
+
+           <li class="recipe-line yield">
+             <h4>Serves: </h4>
+             <input class="quantity" type="number">{{result.yield}}</input>
+           </li>
+
+           <li class="recipe-line"></li>
+
+           <li class="recipe-line">
+             <h4>Ingredients:</h4>
+           </li>
+
+           <ul class="ingredients">
+             <li ng-repeat="ingredient in result.ingredients" class="recipe-line ingredient">
+               <input class="quantity" type="number">{{ingredient.quantity}}</input>
+               <select class="select" type="select">
+                 <option selected disabled>Measurement</option>
+                 <option>Tsp</option>
+                 <option>Tbsp</option>
+                 <option>Cups</option>
+                 <option>Ounces</option>
+               </select>
+               <input class="text" type="text"></input>
+             </li>
+           </ul>
+
+           <li class="recipe-line"></li>
+
+           <li class="recipe-line">
+             <h4>Directions:</h4>
+           </li>
+
+           <ol class="recipe-directions">
+             <li class="recipe-line steps">
+               <input class="step" type="text" placeholder="step"></input>
+             </li>
+           </ol>
+
+           <li class="recipe-line"></li>
+
+         </form>
+       </ul>
      </section>
   </div>
 </div>
