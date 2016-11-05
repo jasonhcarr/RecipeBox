@@ -2,7 +2,7 @@
   <form ng-submit="registerSubmit()">
     <p>
       <label for="nickname">Nickname</label>
-      <input ng-model="register.name" ng-required="true" class="text-input" type="text">
+      <input ng-required="true" ng-model="register.name" class="text-input" type="text">
       <span ng-show="!validUserName()" class="requirement-right">user name must have at least 5 characters</span>
     </p>
     <p>
@@ -13,7 +13,7 @@
     <p>
       <label for="password">Password</label>
       <span ng-show="!validPassword" class="requirement-left">Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
-      <input ng-required="true" class="register-password" name="password" type="password">
+      <input ng-model="register.password" ng-required="true" class="register-password" name="password" type="password">
       <span ng-show="!validPassword()" class="requirement-right">Enter a password longer than 6 characters</span>
     </p>
     <p>

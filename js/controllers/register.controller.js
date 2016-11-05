@@ -1,9 +1,9 @@
-RecipeBox.controller('RegisterController', function ($scope, $state, EntryService) {
+RecipeBox.controller('RegisterController', function ($scope, $state, EntryService, VerifyService) {
     $scope.registerSubmit = function () {
-      EntryService.submit($scope.register);
+      EntryService.register($scope.register);
     };
 
     $scope.validEmail = function () {
-      VerifyService.email($scope.register.email);
+      // VerifyService.email($scope.register.email);
     };
 });

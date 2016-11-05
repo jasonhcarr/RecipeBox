@@ -5,7 +5,7 @@ RecipeBox.controller('LoginController', function ($scope, EntryService, VerifySe
   };
 
   $scope.loginSubmit = function () {
-    EntryService.submit($scope.login);
+    EntryService.login($scope.login);
   };
 
   $scope.validEmail = function () {
