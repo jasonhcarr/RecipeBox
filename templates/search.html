@@ -1,0 +1,11 @@
+<div class="search-container">
+  <aside class="search-input-conatiner">
+    <input ng-model="search.input" type="text" value="Search">
+    <input ng-click="searchForRecipes()" type="submit" value="Search Recipes">
+  </aside>
+  <div class="results-container">
+     <section ng-repeat="result in results" class="result">
+       <!-- insert recipe template here -->
+     </section>
+  </div>
+</div>
