@@ -2,8 +2,8 @@
   <form ng-submit="loginSubmit()">
     <p>
       <label for="email">User Email</label>
-      <span ng-show="" class="requirement-left">Invalid email address</span>
-      <input ng-model="login.email"  ng-required="true" class="text-input" type="email">
+      <span ng-show="!validEmail()" class="requirement-left">Invalid email address</span>
+      <input ng-keydown="enterAsTab($event)" ng-model="login.email"  ng-required="true" class="text-input" type="email">
     </p>
     <p>
       <label for="password">Password</label>

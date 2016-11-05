@@ -1,0 +1,52 @@
+.welcome {
+  form {
+  background: #717C89;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black;
+}
+	p {
+		margin: 0 0 3em;
+		position: relative;
+	}
+
+	label {
+		display: block;
+		font-size: 1.6em;
+		margin: 0 0 20px 0;
+		color: #68B0AB;;
+		font-family: 'Open Sans', sans-serif;
+		font-size: 25px;
+	}
+
+  input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none;
+}
+
+.register-button {
+  margin: 0;
+}
+	input[type="button"] {
+		background: #68B0AB;
+		box-shadow: 0 3px 0 0 #C8D5B9;
+		border-radius: 5px;
+		border: none;
+		color: #F4442E;
+		cursor: pointer;
+		display: block;
+		font-size: 2em;
+		line-height: 1.6em;
+		margin: 2em 0 0;
+		outline: none;
+		padding: 0.8em 0;
+		text-shadow: 0 1px #717C89;
+	}
+}

@@ -1,0 +1,272 @@
+.welcome form {
+  background: #717C89;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black; }
+.welcome p {
+  margin: 0 0 3em;
+  position: relative; }
+.welcome label {
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+  color: #68B0AB;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px; }
+.welcome input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none; }
+.welcome .register-button {
+  margin: 0; }
+.welcome input[type="button"] {
+  background: #68B0AB;
+  box-shadow: 0 3px 0 0 #C8D5B9;
+  border-radius: 5px;
+  border: none;
+  color: #F4442E;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: 0.8em 0;
+  text-shadow: 0 1px #717C89; }
+
+.login form {
+  background: #717C89;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black; }
+.login p {
+  margin: 0 0 3em;
+  position: relative; }
+.login label {
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+  color: #FEFBF7;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px; }
+.login input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none; }
+.login input[type="password"],
+.login input[type="email"],
+.login input[type="text"] {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  font-size: 1.6em;
+  padding: 0.8em 0.5em;
+  border-radius: 5px; }
+.login input[type="password"]:focus,
+.login input[type="email"]:focus,
+.login input[type="text"]:focus {
+  background: #fff; }
+.login #register {
+  margin: 0; }
+.login .login,
+.login .register {
+  display: none; }
+.login .requirement-left,
+.login .requirement-right {
+  border-radius: 5px;
+  display: block;
+  font-size: 1.3em;
+  text-align: center;
+  position: absolute;
+  background: #F4442E;
+  padding: 7px 10px;
+  color: #fff; }
+.login .requirement-left {
+  left: -60%;
+  top: 18px;
+  width: 200px; }
+.login .requirement-right {
+  left: 105%;
+  top: 25px;
+  width: 160px; }
+.login .requirement-left:after,
+.login .requirement-right:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 8px;
+  margin-top: -8px; }
+.login .requirement-right:after {
+  right: 100%;
+  border-right-color: #F4442E; }
+.login .requirement-left:after {
+  left: 100%;
+  border-left-color: #F4442E; }
+.login input[type="button"],
+.login input[type="submit"] {
+  background: #FEFBF7;
+  box-shadow: 0 3px 0 0 #C8D5B9;
+  border-radius: 5px;
+  border: none;
+  color: #F4442E;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: 0.8em 0;
+  text-shadow: 0 1px #717C89; }
+
+.register form {
+  background: #717C89;
+  padding: 4em 4em 2em;
+  max-width: 400px;
+  margin: 100px auto 0;
+  box-shadow: 0 0 1em #222;
+  border-radius: 10px;
+  -webkit-box-shadow: 0 8px 6px -6px black;
+  -moz-box-shadow: 0 8px 6px -6px black;
+  box-shadow: 0 8px 6px -6px black; }
+.register p {
+  margin: 0 0 3em;
+  position: relative; }
+.register label {
+  display: block;
+  font-size: 1.6em;
+  margin: 0 0 20px 0;
+  color: #FEFBF7;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 25px; }
+.register input {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  outline: none; }
+.register input[type="password"],
+.register input[type="email"],
+.register input[type="text"] {
+  background: #f5f5f5;
+  border: 1px solid #e5e5e5;
+  font-size: 1.6em;
+  padding: 0.8em 0.5em;
+  border-radius: 5px; }
+.register input[type="password"]:focus,
+.register input[type="email"]:focus,
+.register input[type="text"]:focus {
+  background: #fff; }
+.register .requirement-left,
+.register .requirement-right {
+  border-radius: 5px;
+  display: block;
+  font-size: 1.3em;
+  text-align: center;
+  position: absolute;
+  background: #F4442E;
+  padding: 7px 10px;
+  color: #fff; }
+.register .requirement-left {
+  left: -60%;
+  top: 18px;
+  width: 200px; }
+.register .requirement-right {
+  left: 105%;
+  top: 25px;
+  width: 160px; }
+.register .requirement-left:after,
+.register .requirement-right:after {
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 50%;
+  pointer-events: none;
+  border-color: rgba(136, 183, 213, 0);
+  border-width: 8px;
+  margin-top: -8px; }
+.register .requirement-right:after {
+  right: 100%;
+  border-right-color: #F4442E; }
+.register .requirement-left:after {
+  left: 100%;
+  border-left-color: #F4442E; }
+.register input[type="submit"] {
+  background: #FEFBF7;
+  box-shadow: 0 3px 0 0 #C8D5B9;
+  border-radius: 5px;
+  border: none;
+  color: #F4442E;
+  cursor: pointer;
+  display: block;
+  font-size: 2em;
+  line-height: 1.6em;
+  margin: 2em 0 0;
+  outline: none;
+  padding: 0.8em 0;
+  text-shadow: 0 1px #717C89; }
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*# sourceMappingURL=main.css.map */

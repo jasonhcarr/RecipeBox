@@ -2,4 +2,8 @@ RecipeBox.controller('RegisterController', function ($scope, $state, EntryServic
     $scope.registerSubmit = function () {
       EntryService.submit($scope.register);
     };
+
+    $scope.validEmail = function () {
+      VerifyService.email($scope.register.email);
+    };
 });

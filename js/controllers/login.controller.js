@@ -1,6 +1,19 @@
-RecipeBox.controller('LoginController', function ($scope, $state, EntryService) {
+RecipeBox.controller('LoginController', function ($scope, EntryService, VerifyService) {
+  $scope.login = {
+    email: "",
+    password: ""
+  };
+
   $scope.loginSubmit = function () {
-    console.log($scope.login);
     EntryService.submit($scope.login);
+  };
+
+  $scope.validEmail = function () {
+    console.log($scope.login.email);
+    // VerifyService.email(email);
+  };
+
+  $scope.enterAsTab = function (event) {
+    VerifyService.enter(event);
   };
 });
