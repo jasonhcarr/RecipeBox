@@ -1,7 +1,51 @@
 @import 'bourbon/bourbon';
 @import 'partials/mixins';
 @import 'partials/recipe-card';
-@import 'partials/welcome';
-@import 'partials/login';
-@import 'partials/register';
+// @import 'partials/welcome';
+@import 'partials/forms';
 @import 'partials/setup/reset';
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  &::before {
+    content: '';
+    background: url("/./images/background/food.png");
+    position: absolute;
+    min-height: 100vh;
+    width: 100vw;
+    filter: saturate(10%) hue-rotate(115deg);
+  }
+}
+
+input,
+input[type="password"],
+input[type="email"],
+input[type="text"] {
+  margin: 0;
+  font-size: 1em;
+  outline: none;
+  padding: .5em;
+	background: #f5f5f5;
+	// border: 1px solid #e5e5e5;
+  @include box-shadow(0px, 0px, 0px, 1px, #e5e5e5);
+	border-radius: 5px;
+}
+
+input[type="submit"],
+input[type="button"] {
+  width: 100%;
+	box-shadow: 0 3px 0 0 #C8D5B9;
+	background: #FEFBF7;
+	border-radius: 5px;
+	border: none;
+	// color: $card-red;
+	outline: none;
+	text-shadow: 0 1px #717C89;
+
+  &:active {
+    filter: hue-rotate(180deg);
+  }
+}

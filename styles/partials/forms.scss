@@ -1,0 +1,114 @@
+.forms {
+
+	@extend .recipe-card;
+	margin: 100px auto;
+	text-align: center;
+	position: relative;
+
+	&::before {
+		@include psuedo();
+		border-bottom: $card-red 1px solid;
+		width: 99%;
+		height: 2em;
+		z-index: 1;
+	}
+
+	&::after {
+		@include psuedo();
+		width: 99%;
+		height: 90%;
+		top: 2em;
+		// thanks css-tricks!
+	  background: repeating-linear-gradient(
+	    180deg,
+	    $card-blue,
+	    $card-blue 1px,
+	    transparent 1px,
+	    transparent 1.5em
+		);
+	}
+
+	> * {
+		display: inline-block;
+		z-index: 1;
+	}
+
+	form {
+		position: relative;
+	}
+
+	.tab h4 {
+		text-align: center;
+		margin: .25em;
+		display: inline-block;
+	}
+
+	p {
+		position: relative;
+		margin: 1em;
+	}
+
+	label {
+		display: block;
+		color: $card-fontcolor;
+	}
+
+	.login,
+	.register {
+		display: none;
+	}
+
+	.requirement-left,
+	.requirement-right {
+		border-radius: 5px;
+		text-align: center;
+		position: absolute;
+		background: $card-red;
+		padding: 7px 10px;
+		color: $card-background;
+		bottom: 1em;
+		width: 100%;
+		transform-origin: center;
+		transform: translateY(50%);
+	}
+
+	.requirement-left {
+		right: 105%;
+	}
+
+	.requirement-right {
+		left: 105%;
+	}
+
+	.requirement-left:after,
+	.requirement-right:after {
+		border: solid transparent;
+		content: "";
+		height: 0;
+		width: 0;
+		position: absolute;
+		top: 50%;
+		pointer-events: none;
+		border-width: 8px;
+		margin-top: -8px;
+	}
+
+	.requirement-right:after {
+		right: 100%;
+		border-right-color: $card-red;
+	}
+
+	.requirement-left:after {
+		left: 100%;
+		border-left-color: $card-red;
+	}
+
+	input[type="button"],
+	input[type="submit"] {
+		cursor: pointer;
+		display: block;
+		line-height: 1.6em;
+		margin: 2em 0 0;
+		padding: 0.8em 0;
+	}
+}
