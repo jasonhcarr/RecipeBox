@@ -1,0 +1,177 @@
+//cosmetic stuff:
+//most units are in EM so that the size and proportions
+//will scale directly with what font size you choose
+//which should (hopefully) make this fairly responsive
+$card-blue: #b5d8db;
+$card-red: #c99da5;
+$card-background: #f8faf5;
+
+$card-width: 30em;
+
+$card-fontsize: 20px;
+$card-fontcolor: #4F4C36;
+
+//card
+ul.recipe-card {
+  //font & colors
+  font-family: sans-serif;
+  font-weight: 100;
+  font-size: $card-fontsize;
+  color: $card-fontcolor;
+  text-shadow: 0px 1px 2px #8c8c8c;
+  background: $card-background;
+  @include radial-gradient(ellipse at center, rgba(255,255,255,1) 0%,rgba(231,223,199,1) 100%);
+  list-style: none;
+
+  //positioning
+  position: relative;
+  width: $card-width;
+
+  //box model
+  padding: 2em 0 0.75em;
+  border-top-right-radius: 8px 30px;
+  border-top-left-radius: 8px 30px;
+  @include box-shadow(0px, 2px, 5px, 1px, rgba(0, 0, 0, .5));
+
+//tab
+  span.tab {
+    //positioning
+    position: absolute;
+    width: #{$card-width/3};
+    height: 1.5em;
+    top: -1.5em;
+    left: 10px;
+
+    //font & colors
+    @include linear-gradient(to bottom, rgba(255,255,255,1) 0%,rgba(231,223,199,1) 115%);
+
+    //box model
+    border-top-right-radius: 30px 90px;
+    border-top-left-radius: 30px 90px;
+
+    //interactivity (maybe delete this?)
+    &:hover {
+      cursor: -webkit-grab;
+    }
+    &:active {
+      cursor: -webkit-grabbing;
+    }
+    //recipe name input
+    input {
+      max-width: 80%;
+      margin: .25em 10%;
+      font: inherit;
+      text-overflow: ellipsis;
+      text-align: center;
+    }
+  }
+
+//general input properties:
+  input, select {
+    //hide in line:
+    border: none;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: transparent;
+
+    //gimme dat text shadow tho
+    text-shadow: inherit;
+
+    //gradient background on focus:
+    &:focus {
+      outline: none;
+      background: rgba(255,255,255,0.5);
+      @include box-shadow(0px, 0px, 16px, 2px, rgba(177, 134, 43, 0.25), inset);
+    }
+
+    //style by type:
+    &.quantity {
+      width: 2em;
+      text-align: center;
+    }
+
+    &.text {
+      width: 100%;
+    }
+
+    &.step {
+      width: 100%;
+    }
+  }
+
+//list item styles:
+  li.recipe-line {
+    //display property
+    display: flex;
+
+    //appearance
+    border-bottom: 1px $card-blue solid;
+    width: 99%; // leaves sliver of whitespace like a real index card!!11!
+    padding-left: 1%; //tiny indentation
+
+    //text formatting funtimes
+    height: 1.5em;
+    line-height: 1em;
+    align-items: baseline;
+
+    &:first-child {
+      border-top: 1px $card-red solid;
+    }
+
+    //cancel red line for sub-lists
+    &:first-child.steps, &:first-child.ingredient {
+      border-top: none;
+    }
+
+    //baseline hack, height determines spacing from baseline:
+    &::after {
+      content: '';
+      height: 1.2em;
+      vertical-align: baseline;
+      display: inline-block;
+    }
+
+    //general styles for all header and inputs, and whatever else
+    //ends up in these list items:
+    > * {
+      //display property
+      display: inline-flex; // this is also applied to sublist children!
+      //formatting
+      margin: 0;
+      height: 1.2em;
+      //ensure font consistency
+      font: inherit;
+      color: inherit;
+      font-size: inherit;
+      line-height: inherit;
+      //flexbox stuff
+      align-self: baseline;
+    }
+
+  }
+
+//sublists:
+  ul.ingredients {
+    margin: 0;
+    padding-left: 0;
+    li {
+      padding-left: 1em;
+    }
+  }
+
+//it feels good to actually use default ordered list stylings!
+//albeit somewhat hacked around to use flex alignment
+//but oh well:
+  ol.recipe-directions {
+    list-style-position: inside;
+    padding-left: 0;
+    li {
+      padding-left: 1em;
+      &::before {
+        content: "";
+        display: list-item;
+      }
+    }
+  }
+
+}
