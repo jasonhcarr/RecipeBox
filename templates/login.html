@@ -1,14 +1,18 @@
-<div class="login">
+<div class="forms login">
+  <span class="tab"><h4>Login</h4></span>
   <form ng-submit="loginSubmit()">
     <p>
       <label for="email">User Email</label>
-      <span ng-show="!validEmail()" class="requirement-left">Invalid email address</span>
       <input ng-keydown="enterAsTab($event)" ng-model="login.email"  ng-required="true" class="text-input" type="email">
+        <span ng-show="!validEmail()" class="requirement-left">Invalid email address</span>
+
+      </input>
     </p>
     <p>
       <label for="password">Password</label>
-      <span class="requirement-right">Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
       <input ng-required="true" ng-model="login.password" class="text-input password" type="password">
+        <span class="requirement-right">Enter a password with at least one capital letter (A-Z), one lowercase letter (a-z) and one number (0-9).</span>
+      </input>
       <span ng-show="" class="requirement-left">Enter a password longer than 6 characters</span>
     </p>
     <p>
