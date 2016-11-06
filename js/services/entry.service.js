@@ -2,7 +2,11 @@ RecipeBox.service('EntryService', function($http, $state) {
     function registerUser(data) {
       console.log(data);
         // data = angular.toJson(data);
-         return $http.post('https://recipe-box-api2.herokuapp.com/api/users',data).then(function successCallback() {
+        return $http({
+          method: 'POST',
+          url: 'https://peaceful-journey-21229.herokuapp.com/api/users',
+          data: data
+        }).then(function successCallback() {
           console.log(response);
           // data = delete date.name;
           // console.log(data);
