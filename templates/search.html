@@ -1,20 +1,24 @@
 <div class="search-container">
-  <aside class="search-input-container">
-    <input ng-model="search.input" type="text" value="Search">
-    <input ng-click="searchForRecipes(search.input)" type="button" value="Search Recipes">
+
+  <aside class="forms search-input-container">
+    <span class="tab"><h4>Search</h4></span>
+    <input ng-model="search.input" type="text" value="Search"></input>
+    <input ng-click="searchForRecipes(search.input)" type="button" value="Search Recipes"></input>
   </aside>
+
+
   <div class="results-container">
      <section ng-repeat="result in results" class="result">
        <ul class="recipe-card">
          <span class="tab">
-           <input type="text">{{result.name}}</input>
+           <input type="text" value="{{result.name}}"></input>
          </span>
          <form name="new-recipe" method="POST">
            <li class="recipe-line"></li>
 
            <li class="recipe-line yield">
              <h4>Serves: </h4>
-             <input class="quantity" type="number">{{result.yield}}</input>
+             <input class="quantity" type="number" value="{{result.yield}}"></input>
            </li>
 
            <li class="recipe-line"></li>
@@ -25,7 +29,7 @@
 
            <ul class="ingredients">
              <li ng-repeat="ingredient in result.ingredients" class="recipe-line ingredient">
-               <input class="quantity" type="number">{{ingredient.quantity}}</input>
+               <input class="quantity" type="number" value="{{ingredient.quantity}}"></input>
                <select class="select" type="select">
                  <option selected disabled>Measurement</option>
                  <option>Tsp</option>
@@ -33,7 +37,7 @@
                  <option>Cups</option>
                  <option>Ounces</option>
                </select>
-               <input class="text" type="text"></input>
+               <input class="text" type="text" value="{{ingredient.name}}"></input>
              </li>
            </ul>
 
@@ -44,8 +48,8 @@
            </li>
 
            <ol class="recipe-directions">
-             <li class="recipe-line steps">
-               <input class="step" type="text" placeholder="step"></input>
+             <li ng-repeat="direction in result.instructions" class="recipe-line steps">
+               <input class="step" type="text" placeholder="step" value="{{direction.Step}}"></input>
              </li>
            </ol>
 
