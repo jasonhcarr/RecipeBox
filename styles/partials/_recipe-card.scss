@@ -87,7 +87,7 @@ $card-fontcolor: #4F4C36;
 
     //style by type:
     &.quantity {
-      width: 2em;
+      width: 3em;
       text-align: center;
     }
 
@@ -167,10 +167,11 @@ $card-fontcolor: #4F4C36;
     list-style-position: inside;
     padding-left: 0;
     li {
-      padding-left: 1em;
+      padding-left: 1.5em;
       &::before {
         content: "";
         display: list-item;
+        list-style: decimal;
       }
     }
   }

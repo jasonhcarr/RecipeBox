@@ -29,6 +29,7 @@ input,
 input[type="password"],
 input[type="email"],
 input[type="text"] {
+  position: relative;
   margin: 0;
   font-size: 1em;
   outline: none;
