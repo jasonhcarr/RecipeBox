@@ -2,8 +2,10 @@
 
   <aside class="forms search-input-container">
     <span class="tab"><h4>Search</h4></span>
-    <input ng-model="search.input" type="text" value="Search"></input>
-    <input ng-click="searchForRecipes(search.input)" type="button" value="Search Recipes"></input>
+    <form name="recipe-search">
+      <input ng-model="search.input" type="text" value="Search"></input>
+      <input ng-click="searchForRecipes(search.input)" type="button" value="Search Recipes"></input>
+    </form>
   </aside>
 
 
