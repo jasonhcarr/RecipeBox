@@ -16,7 +16,7 @@
 	&::after {
 		@include psuedo();
 		width: 99%;
-		height: 90%;
+		height: 87%;
 		top: 2em;
 		// thanks css-tricks!
 	  background: repeating-linear-gradient(
@@ -103,12 +103,42 @@
 		border-left-color: $card-red;
 	}
 
+	input,
+	input[type="password"],
+	input[type="email"],
+	input[type="text"] {
+	  position: relative;
+	  margin: 0;
+	  font-size: 1em;
+	  outline: none;
+	  padding: .5em;
+		background: #f5f5f5;
+	  @include box-shadow(0px, 0px, 0px, 1px, #e5e5e5);
+		border-radius: 5px;
+	}
+
+	input[type="submit"],
+	input[type="button"] {
+	  width: 100%;
+		box-shadow: 0 3px 0 0 #C8D5B9;
+		background: #FEFBF7;
+		border-radius: 5px;
+		border: none;
+		// color: $card-red;
+		outline: none;
+		text-shadow: 0 1px #717C89;
+
+	  &:active {
+	    filter: hue-rotate(180deg);
+	  }
+	}
+
 	input[type="button"],
 	input[type="submit"] {
 		cursor: pointer;
 		display: block;
 		line-height: 1.6em;
-		margin: 2em 0 0;
+		margin: 1em 0;
 		padding: 0.8em 0;
 	}
 }
