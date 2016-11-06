@@ -17,7 +17,7 @@ RecipeBox.service('EntryService', function($http, $state) {
         };
 
         $.ajax(settings).done(function (response) {
-          console.log(response);
+           return response;
         });          // data = delete date.name;
           // console.log(data);
           // $http({
@@ -53,7 +53,7 @@ RecipeBox.service('EntryService', function($http, $state) {
       };
 
       $.ajax(settings).done(function (response) {
-        console.log(response);
+        return response;
       });
     }
 
