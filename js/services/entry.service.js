@@ -1,14 +1,24 @@
 RecipeBox.service('EntryService', function($http, $state) {
     function registerUser(data) {
-      console.log(data);
-        // data = angular.toJson(data);
-        return $http({
-          method: 'POST',
-          url: 'https://peaceful-journey-21229.herokuapp.com/api/users',
-          data: data
-        }).then(function successCallback() {
+        data = angular.toJson(data);
+        console.log(data);
+        var settings = {
+          "async": true,
+          "crossDomain": true,
+          "url": "https://peaceful-journey-21229.herokuapp.com/api/users",
+          "method": "POST",
+          "headers": {
+            "cache-control": "no-cache",
+          },
+          "processData": false,
+          "contentType": false,
+          "mimeType": "multipart/form-data",
+          "data": data
+        };
+
+        $.ajax(settings).done(function (response) {
           console.log(response);
-          // data = delete date.name;
+        });          // data = delete date.name;
           // console.log(data);
           // $http({
           //   method: 'POST',
@@ -18,24 +28,37 @@ RecipeBox.service('EntryService', function($http, $state) {
           //   console.log(response);
           //   $state.go('recipe-box.box');
           // });
-        }, function errorCallback(response) {
-            alert('Log-in Failed.  Please try again or register.');
-            $state.go('recipe-box.index');
-        });
+        // }, function errorCallback(response) {
+        //     alert('Log-in Failed.  Please try again or register.');
+        //     $state.go('recipe-box.index');
+        // });
     }
 
-    function getAuthToken(data) {
+    function loginUser(data) {
       // data = angular.toJson(data);
-      $http({
-          method: 'POST',
-          url: 'https://recipe-box-api2.herokuapp.com/authenticate',
-          data: data
-      }).then(function successCallback(response) {
-          console.log(response);
-    });
-}
+      console.log(data);
+      var settings = {
+        "async": true,
+        "crossDomain": true,
+        "url": "https://peaceful-journey-21229.herokuapp.com/api/user?name=" + data.name,
+        "method": "GET",
+        "headers": {
+          "cache-control": "no-cache",
+          // "postman-token": "512656be-e065-1867-645b-d73ba82cd80e"
+        },
+        "processData": false,
+        "contentType": false,
+        "mimeType": "multipart/form-data",
+        "data": ""
+      };
+
+      $.ajax(settings).done(function (response) {
+        console.log(response);
+      });
+    }
+
     return {
         register: registerUser,
-        login: getAuthToken
+        login: loginUser
     };
 });
