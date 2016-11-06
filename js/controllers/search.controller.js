@@ -6,6 +6,8 @@ RecipeBox.controller('SearchController', function ($scope, SearchService, Recipe
       //   array[i]
       // }
       console.log(new Recipe(data));
+      console.log(data);
+      $scope.results = data;
     });
   };
 });
