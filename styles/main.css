@@ -99,6 +99,12 @@
         content: "";
         display: list-item; }
 
+.recipe-box-container {
+  margin: 25px auto;
+  width: 30em; }
+  .recipe-box-container .recipe-card, .recipe-box-container .forms {
+    margin: 0; }
+
 .forms {
   margin: 100px auto;
   text-align: center;
@@ -122,7 +128,7 @@
     left: 0;
     top: 0;
     width: 99%;
-    height: 90%;
+    height: 87%;
     top: 2em;
     background: repeating-linear-gradient(180deg, #b5d8db, #b5d8db 1px, transparent 1px, transparent 1.5em); }
   .forms > * {
@@ -176,13 +182,45 @@
   .forms .requirement-left:after {
     left: 100%;
     border-left-color: #c99da5; }
+  .forms input,
+  .forms input[type="password"],
+  .forms input[type="email"],
+  .forms input[type="text"] {
+    position: relative;
+    margin: 0;
+    font-size: 1em;
+    outline: none;
+    padding: .5em;
+    background: #f5f5f5;
+    -webkit-box-shadow: 0px 0px 0px 1px #e5e5e5;
+    -moz-box-shadow: 0px 0px 0px 1px #e5e5e5;
+    box-shadow: 0px 0px 0px 1px #e5e5e5;
+    border-radius: 5px; }
+  .forms input[type="submit"],
+  .forms input[type="button"] {
+    width: 100%;
+    box-shadow: 0 3px 0 0 #C8D5B9;
+    background: #FEFBF7;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-shadow: 0 1px #717C89; }
+    .forms input[type="submit"]:active,
+    .forms input[type="button"]:active {
+      filter: hue-rotate(180deg); }
   .forms input[type="button"],
   .forms input[type="submit"] {
     cursor: pointer;
     display: block;
     line-height: 1.6em;
-    margin: 2em 0 0;
+    margin: 1em 0;
     padding: 0.8em 0; }
+
+.results-container {
+  margin: 25px auto;
+  width: 30em; }
+  .results-container .recipe-card, .results-container .forms {
+    margin: 0; }
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
@@ -234,39 +272,18 @@ table {
 * {
   box-sizing: border-box; }
 
-body::before {
-  content: '';
-  background: url("/./images/background/food.png");
-  position: absolute;
-  min-height: 100vh;
-  width: 100vw;
-  filter: saturate(10%) hue-rotate(115deg); }
+html {
+  height: 100vh;
+  font-size: 25px; }
 
-input,
-input[type="password"],
-input[type="email"],
-input[type="text"] {
-  margin: 0;
-  font-size: 1em;
-  outline: none;
-  padding: .5em;
-  background: #f5f5f5;
-  -webkit-box-shadow: 0px 0px 0px 1px #e5e5e5;
-  -moz-box-shadow: 0px 0px 0px 1px #e5e5e5;
-  box-shadow: 0px 0px 0px 1px #e5e5e5;
-  border-radius: 5px; }
-
-input[type="submit"],
-input[type="button"] {
-  width: 100%;
-  box-shadow: 0 3px 0 0 #C8D5B9;
-  background: #FEFBF7;
-  border-radius: 5px;
-  border: none;
-  outline: none;
-  text-shadow: 0 1px #717C89; }
-  input[type="submit"]:active,
-  input[type="button"]:active {
-    filter: hue-rotate(180deg); }
+body {
+  min-height: 100vh; }
+  body::before {
+    position: fixed;
+    content: '';
+    background: url("/./images/background/food.png");
+    min-height: 100vh;
+    width: 100vw;
+    filter: saturate(10%) hue-rotate(115deg); }
 
 /*# sourceMappingURL=main.css.map */

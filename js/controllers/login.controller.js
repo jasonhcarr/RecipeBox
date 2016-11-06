@@ -1,11 +1,12 @@
-RecipeBox.controller('LoginController', function ($scope, EntryService, VerifyService) {
+RecipeBox.controller('LoginController', function ($state, $scope, EntryService, VerifyService) {
   $scope.login = {
-    email: "",
+    name: "",
     password: ""
   };
 
   $scope.loginSubmit = function () {
     EntryService.login($scope.login);
+    $state.go('recipe-box.box');
   };
 
   $scope.validEmail = function () {

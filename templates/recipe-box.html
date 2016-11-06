@@ -1,14 +1,14 @@
 <div class="recipe-box-container">
-  <ul class="recipe-card">
+  <ul ng-cloak="true" class="recipe-card">
     <span class="tab">
-      <input type="text" placeholder="Recipe Name"></input>
+      <input ng-model="recipe.name" type="text">{{recipe.name}}</input>
     </span>
-    <form ng-submit="" name="new-recipe">
+    <form ng-submit="createNewRecipe()" name="new-recipe" method="POST">
       <li class="recipe-line"></li>
 
       <li class="recipe-line yield">
         <h4>Serves: </h4>
-        <input class="quantity" type="number" placeholder="0"></input>
+        <input ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}"></input>
       </li>
 
       <li class="recipe-line"></li>
@@ -18,16 +18,16 @@
       </li>
 
       <ul class="ingredients">
-        <li class="recipe-line ingredient">
-          <input class="quantity" type="number" placeholder="0"></input>
-          <input class="text" type="text" placeholder="ingredient"></input>
-          <select class="select" type="select">
+        <li ng-repeat="ingredient in recipe.ingredients" class="recipe-line ingredient">
+          <input ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
+          <select ng-model="ingredient.measure" class="select" type="select">
             <option selected disabled>Measurement</option>
             <option>Tsp</option>
             <option>Tbsp</option>
             <option>Cups</option>
             <option>Ounces</option>
           </select>
+          <input ng-model="ingredient.name" ng-keydown="newLine($event)" class="text" type="text" value="{{ingredient.name}}"></input>
         </li>
       </ul>
 
@@ -38,8 +38,8 @@
       </li>
 
       <ol class="recipe-directions">
-        <li class="recipe-line steps">
-          <input class="step" type="text" placeholder="step"></input>
+        <li ng-repeat="direction in recipe.instructions" class="recipe-line steps">
+          <input ng-model="direction.Step" class="step" type="text" placeholder="step" value="{{direction.Step}}"></input>
         </li>
       </ol>
 
@@ -47,5 +47,5 @@
 
     </form>
   </ul>
-
+  <h1>Create A New Recipe</h1>
 </div>

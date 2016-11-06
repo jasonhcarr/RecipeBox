@@ -2,11 +2,9 @@
   <span class="tab"><h4>Login</h4></span>
   <form ng-submit="loginSubmit()">
     <p>
-      <label for="email">User Email</label>
-      <input ng-keydown="enterAsTab($event)" ng-model="login.email"  ng-required="true" class="text-input" type="email">
-        <span ng-show="!validEmail()" class="requirement-left">Invalid email address</span>
-
-      </input>
+      <label for="nickname">Nickname</label>
+      <input ng-required="true" ng-model="login.email" class="text-input" type="text">
+      <span ng-show="!validUserName()" class="requirement-right">user name must have at least 5 characters</span>
     </p>
     <p>
       <label for="password">Password</label>

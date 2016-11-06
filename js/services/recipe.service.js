@@ -1,9 +1,9 @@
-RecipeBox.service('RecipeService', function($scope, $http) {
+RecipeBox.service('RecipeService', function($http) {
     function createRecipe(recipe) {
         var settings = {
             "async": true,
             "crossDomain": true,
-            "url": "https://peaceful-journey-21229.herokuapp.com/api/users",
+            "url": "https://peaceful-journey-21229.herokuapp.com/api/recipe",
             "method": "POST",
             "headers": {
                 "cache-control": "no-cache",
@@ -11,11 +11,15 @@ RecipeBox.service('RecipeService', function($scope, $http) {
             "processData": false,
             "contentType": false,
             "mimeType": "multipart/form-data",
-            "data": form
+            "data": recipe
         };
 
         $.ajax(settings).done(function(response) {
             console.log(response);
         });
     }
+
+    return {
+      create: createRecipe
+    };
 });
