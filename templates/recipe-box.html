@@ -1,5 +1,51 @@
 <div class="recipe-box-container">
-  <p>
-    This is where the user's profile/recipe box will show up
-  </p>
+  <ul class="recipe-card">
+    <span class="tab">
+      <input type="text" placeholder="Recipe Name"></input>
+    </span>
+    <form ng-submit="" name="new-recipe">
+      <li class="recipe-line"></li>
+
+      <li class="recipe-line yield">
+        <h4>Serves: </h4>
+        <input class="quantity" type="number" placeholder="0"></input>
+      </li>
+
+      <li class="recipe-line"></li>
+
+      <li class="recipe-line">
+        <h4>Ingredients:</h4>
+      </li>
+
+      <ul class="ingredients">
+        <li class="recipe-line ingredient">
+          <input class="quantity" type="number" placeholder="0"></input>
+          <input class="text" type="text" placeholder="ingredient"></input>
+          <select class="select" type="select">
+            <option selected disabled>Measurement</option>
+            <option>Tsp</option>
+            <option>Tbsp</option>
+            <option>Cups</option>
+            <option>Ounces</option>
+          </select>
+        </li>
+      </ul>
+
+      <li class="recipe-line"></li>
+
+      <li class="recipe-line">
+        <h4>Directions:</h4>
+      </li>
+
+      <ol class="recipe-directions">
+        <li class="recipe-line steps">
+          <input class="step" type="text" placeholder="step"></input>
+        </li>
+      </ol>
+
+      <li class="recipe-line"></li>
+
+    </form>
+  </ul>
+
 </div>
