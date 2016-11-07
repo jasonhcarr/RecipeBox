@@ -30,26 +30,27 @@
     &.search{
       right: 5rem;
     }
-  input[type="submit"],
-  input[type="button"] {
-    height: auto;
-    width: auto;
-    box-shadow: 0 3px 0 0 #C8D5B9;
-    background: #FEFBF7;
-    border-radius: 5px;
-    text-shadow: 0 1px #717C89;
-    cursor: pointer;
-    padding: .2rem;
-
-    &:active {
+    input[type="submit"],
+    input[type="button"] {
+      height: auto;
+      width: auto;
+      box-shadow: 0 3px 0 0 #C8D5B9;
       background: #FEFBF7;
-      filter: hue-rotate(180deg);
-    }
-    &.save{
-      right: 1rem;
-    }
-    &.search{
-      right: 5rem;
+      border-radius: 5px;
+      text-shadow: 0 1px #717C89;
+      cursor: pointer;
+      padding: .2rem;
+
+      &:active {
+        background: #FEFBF7;
+        filter: hue-rotate(180deg);
+      }
+      &.save{
+        right: 1rem;
+      }
+      &.search{
+        right: 5rem;
+      }
     }
   }
 }
