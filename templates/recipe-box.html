@@ -2,13 +2,13 @@
   <ul ng-cloak="true" class="recipe-card">
     <form ng-submit="createNewRecipe()" name="newRecipe" method="POST">
     <span class="tab">
-      <input ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
+      <input ng-required="true" ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
     </span>
       <li class="recipe-line"></li>
 
       <li class="recipe-line yield">
         <h4>Serves: </h4>
-        <input ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}"></input>
+        <input ng-required="true" ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}"></input>
       </li>
 
       <li class="recipe-line"></li>
@@ -19,15 +19,11 @@
 
       <ul class="ingredients">
         <li ng-repeat="ingredient in recipe.ingredients track by $index" class="recipe-line ingredient">
-          <input ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
-          <select ng-model="ingredient.measure" class="select" type="select">
-            <option selected disabled>Measurement</option>
-            <option>Tsp</option>
-            <option>Tbsp</option>
-            <option>Cups</option>
-            <option>Ounces</option>
+          <input ng-required="true" ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
+          <select class="select" ng-model="ingredient.measure" ng-options="opt for opt in ['Tsp', 'Tbsp', 'Cups', 'Ounces']" type="select" required>
+            <option></option>
           </select>
-          <input ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}"></input>
+          <input ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}"></input>
         </li>
       </ul>
 
