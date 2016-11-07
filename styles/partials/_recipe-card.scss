@@ -120,12 +120,12 @@ $card-fontcolor: #4F4C36;
     line-height: 1em;
     align-items: baseline;
 
-    &:first-child {
+    &:nth-child(2) {
       border-top: 1px $card-red solid;
     }
 
     //cancel red line for sub-lists
-    &:first-child.steps, &:first-child.ingredient {
+    &:nth-child(2).steps, &:nth-child(2).ingredient {
       border-top: none;
     }
 
