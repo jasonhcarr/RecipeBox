@@ -56,4 +56,8 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
         RecipeService.dummyCreate($scope.recipe);
     };
 
+    $scope.goToSearch = function() {
+      $state.go('recipe-box.search');
+    };
+
 });
