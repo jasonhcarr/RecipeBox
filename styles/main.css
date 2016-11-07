@@ -1,7 +1,69 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block; }
+
+body {
+  line-height: 1; }
+
+ol, ul {
+  list-style: none; }
+
+blockquote, q {
+  quotes: none; }
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+@-webkit-keyframes scroll {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 100% 100%; } }
+@-moz-keyframes scroll {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 100% 100%; } }
+@keyframes scroll {
+  0% {
+    background-position: 0 0; }
+  100% {
+    background-position: 100% 100%; } }
 .recipe-card, .forms {
   font-family: sans-serif;
   font-weight: 100;
-  font-size: 0.8rem;
+  font-size: 20px;
   color: #4F4C36;
   text-shadow: 0px 1px 2px #8c8c8c;
   background: #f8faf5;
@@ -9,8 +71,8 @@
   background-image: radial-gradient(  ellipse at center, white 0%, #e7dfc7 100%);
   list-style: none;
   position: relative;
-  width: 30rem;
-  padding: 2rem 0 0.75em;
+  width: 30em;
+  padding: 2em 0 0.75em;
   border-top-right-radius: 8px 30px;
   border-top-left-radius: 8px 30px;
   -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
@@ -18,7 +80,7 @@
   box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5); }
   .recipe-card span.tab, .forms span.tab {
     position: absolute;
-    width: 10rem;
+    width: 10em;
     height: 1.5em;
     top: -1.5em;
     left: 10px;
@@ -59,6 +121,9 @@
       width: 100%; }
     .recipe-card input.step, .forms input.step, .recipe-card select.step, .forms select.step {
       width: 100%; }
+    .recipe-card input:invalid, .forms input:invalid, .recipe-card select:invalid, .forms select:invalid {
+      opacity: .5;
+      text-shadow: 0px 1px 2px #8c8c8c; }
   .recipe-card li.recipe-line, .forms li.recipe-line {
     display: flex;
     border-bottom: 1px #b5d8db solid;
@@ -67,9 +132,9 @@
     height: 1.5em;
     line-height: 1em;
     align-items: baseline; }
-    .recipe-card li.recipe-line:first-child, .forms li.recipe-line:first-child {
+    .recipe-card li.recipe-line:nth-child(2), .forms li.recipe-line:nth-child(2) {
       border-top: 1px #c99da5 solid; }
-    .recipe-card li.recipe-line:first-child.steps, .forms li.recipe-line:first-child.steps, .recipe-card li.recipe-line:first-child.ingredient, .forms li.recipe-line:first-child.ingredient {
+    .recipe-card li.recipe-line:nth-child(2).steps, .forms li.recipe-line:nth-child(2).steps, .recipe-card li.recipe-line:nth-child(2).ingredient, .forms li.recipe-line:nth-child(2).ingredient {
       border-top: none; }
     .recipe-card li.recipe-line::after, .forms li.recipe-line::after {
       content: '';
@@ -97,13 +162,34 @@
       padding-left: 1em; }
       .recipe-card ol.recipe-directions li::before, .forms ol.recipe-directions li::before {
         content: "";
-        display: list-item; }
+        display: list-item;
+        list-style-type: decimal; }
 
 .recipe-box-container {
-  margin: 25px auto;
-  width: 30rem; }
+  margin: 100px auto;
+  width: 30em;
+  position: relative; }
   .recipe-box-container .recipe-card, .recipe-box-container .forms {
-    margin: 0; }
+    margin: 0;
+    width: 100%; }
+  .recipe-box-container .recipe {
+    position: absolute;
+    bottom: 1rem;
+    font: inherit;
+    font-size: 1rem;
+    box-shadow: 0 3px 0 0 #C8D5B9;
+    background: #FEFBF7;
+    border-radius: 5px;
+    text-shadow: 0 1px #717C89;
+    cursor: pointer;
+    padding: .2rem; }
+    .recipe-box-container .recipe:active {
+      background: #FEFBF7;
+      filter: hue-rotate(180deg); }
+    .recipe-box-container .recipe.save {
+      right: 1rem; }
+    .recipe-box-container .recipe.search {
+      right: 5rem; }
 
 .forms {
   margin: 100px auto;
@@ -186,6 +272,7 @@
   .forms input[type="password"],
   .forms input[type="email"],
   .forms input[type="text"] {
+    opacity: 1;
     position: relative;
     margin: 0;
     font-size: 1em;
@@ -197,77 +284,27 @@
     box-shadow: 0px 0px 0px 1px #e5e5e5;
     border-radius: 5px; }
   .forms input[type="submit"],
-  .forms input[type="button"] {
+  .forms input[type="button"],
+  .forms button {
+    font: inherit;
     width: 100%;
     box-shadow: 0 3px 0 0 #C8D5B9;
     background: #FEFBF7;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    text-shadow: 0 1px #717C89; }
-    .forms input[type="submit"]:active,
-    .forms input[type="button"]:active {
-      filter: hue-rotate(180deg); }
-  .forms input[type="button"],
-  .forms input[type="submit"] {
+    text-shadow: 0 1px #717C89;
     cursor: pointer;
     display: block;
-    line-height: 1.6em;
     margin: 1em 0;
-    padding: 0.8em 0; }
+    padding: 1.2em 0; }
+    .forms input[type="submit"]:active,
+    .forms input[type="button"]:active,
+    .forms button:active {
+      filter: hue-rotate(180deg); }
 
 .results-container {
   margin: 25px auto;
-  width: 30rem; }
+  width: 30em; }
   .results-container .recipe-card, .results-container .forms {
     margin: 0; }
-
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
-*/
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
 
 * {
   box-sizing: border-box; }
@@ -284,6 +321,9 @@ body {
     background: url("/./images/background/food.png");
     min-height: 100vh;
     width: 100vw;
-    filter: saturate(10%) hue-rotate(115deg); }
+    filter: saturate(10%) hue-rotate(115deg);
+    -webkit-animation: scroll 30s linear infinite;
+    -moz-animation: scroll 30s linear infinite;
+    animation: scroll 30s linear infinite; }
 
 /*# sourceMappingURL=main.css.map */
