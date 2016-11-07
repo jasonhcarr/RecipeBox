@@ -79,4 +79,8 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
         resetForm();
     };
 
+    $scope.goToSearch = function() {
+      $state.go('recipe-box.search');
+    };
+
 });
