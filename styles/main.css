@@ -1,329 +1,72 @@
-/* http://meyerweb.com/eric/tools/css/reset/
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+Error: Invalid CSS after "...dding: 1.2em 0;": expected "}", was ""
+        on line 133 of partials/_forms.scss
+        from line 7 of main.scss
+
+128: 		text-shadow: 0 1px #717C89;
+129: 		cursor: pointer;
+130: 		display: block;
+131: 		margin: 1em 0;
+132: 		padding: 1.2em 0;
+
+Backtrace:
+partials/_forms.scss:133
+main.scss:7
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:658:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:125:in `stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:406:in `_to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:312:in `to_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:326:in `block in visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `block in with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:88:in `with_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:325:in `visit_import'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:160:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:169:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:181:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:168:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:188:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:159:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:381:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/engine.rb:298:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-@-webkit-keyframes scroll {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 100% 100%; } }
-@-moz-keyframes scroll {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 100% 100%; } }
-@keyframes scroll {
-  0% {
-    background-position: 0 0; }
-  100% {
-    background-position: 100% 100%; } }
-.recipe-card, .forms {
-  font-family: sans-serif;
-  font-weight: 100;
-  font-size: 20px;
-  color: #4F4C36;
-  text-shadow: 0px 1px 2px #8c8c8c;
-  background: #f8faf5;
-  background-image: -webkit-radial-gradient(center, ellipse, white 0%, #e7dfc7 100%);
-  background-image: radial-gradient(  ellipse at center, white 0%, #e7dfc7 100%);
-  list-style: none;
-  position: relative;
-  width: 30em;
-  padding: 2em 0 0.75em;
-  border-top-right-radius: 8px 30px;
-  border-top-left-radius: 8px 30px;
-  -webkit-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
-  -moz-box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5);
-  box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.5); }
-  .recipe-card span.tab, .forms span.tab {
-    position: absolute;
-    width: 10em;
-    height: 1.5em;
-    top: -1.5em;
-    left: 10px;
-    background-color: white;
-    background-image: -webkit-linear-gradient(top, white 0%, #e7dfc7 115%);
-    background-image: linear-gradient(to bottom,white 0%, #e7dfc7 115%);
-    border-top-right-radius: 30px 90px;
-    border-top-left-radius: 30px 90px;
-    -webkit-box-shadow: -3px -4px 5px -3px rgba(0, 0, 0, 0.5);
-    -moz-box-shadow: -3px -4px 5px -3px rgba(0, 0, 0, 0.5);
-    box-shadow: -3px -4px 5px -3px rgba(0, 0, 0, 0.5); }
-    .recipe-card span.tab:hover, .forms span.tab:hover {
-      cursor: -webkit-grab; }
-    .recipe-card span.tab:active, .forms span.tab:active {
-      cursor: -webkit-grabbing; }
-    .recipe-card span.tab input, .forms span.tab input {
-      max-width: 80%;
-      margin: .25em 10%;
-      font: inherit;
-      text-overflow: ellipsis;
-      text-align: center; }
-  .recipe-card input, .forms input, .recipe-card select, .forms select, .recipe-card button, .forms button {
-    border: none;
-    padding-top: 0;
-    padding-bottom: 0;
-    background: transparent;
-    text-shadow: inherit; }
-    .recipe-card input:focus, .forms input:focus, .recipe-card select:focus, .forms select:focus, .recipe-card button:focus, .forms button:focus {
-      outline: none;
-      background: rgba(255, 255, 255, 0.5);
-      -webkit-box-shadow: inset 0px 0px 16px 2px rgba(177, 134, 43, 0.25);
-      -moz-box-shadow: inset 0px 0px 16px 2px rgba(177, 134, 43, 0.25);
-      box-shadow: inset 0px 0px 16px 2px rgba(177, 134, 43, 0.25); }
-    .recipe-card input.quantity, .forms input.quantity, .recipe-card select.quantity, .forms select.quantity, .recipe-card button.quantity, .forms button.quantity {
-      width: 2em;
-      text-align: center; }
-    .recipe-card input.text, .forms input.text, .recipe-card select.text, .forms select.text, .recipe-card button.text, .forms button.text {
-      width: 100%; }
-    .recipe-card input.step, .forms input.step, .recipe-card select.step, .forms select.step, .recipe-card button.step, .forms button.step {
-      width: 100%; }
-    .recipe-card input:invalid, .forms input:invalid, .recipe-card select:invalid, .forms select:invalid, .recipe-card button:invalid, .forms button:invalid {
-      opacity: .5;
-      text-shadow: 0px 1px 2px #8c8c8c; }
-  .recipe-card li.recipe-line, .forms li.recipe-line {
-    display: flex;
-    border-bottom: 1px #b5d8db solid;
-    width: 99%;
-    padding-left: 1%;
-    height: 1.5em;
-    line-height: 1em;
-    align-items: baseline; }
-    .recipe-card li.recipe-line:nth-child(2), .forms li.recipe-line:nth-child(2) {
-      border-top: 1px #c99da5 solid; }
-    .recipe-card li.recipe-line:nth-child(2).steps, .forms li.recipe-line:nth-child(2).steps, .recipe-card li.recipe-line:nth-child(2).ingredient, .forms li.recipe-line:nth-child(2).ingredient {
-      border-top: none; }
-    .recipe-card li.recipe-line::after, .forms li.recipe-line::after {
-      content: '';
-      height: 1.2em;
-      vertical-align: baseline;
-      display: inline-block; }
-    .recipe-card li.recipe-line > *, .forms li.recipe-line > * {
-      display: inline-flex;
-      margin: 0;
-      height: 1.2em;
-      font: inherit;
-      color: inherit;
-      font-size: inherit;
-      line-height: inherit;
-      align-self: baseline; }
-  .recipe-card ul.ingredients, .forms ul.ingredients {
-    margin: 0;
-    padding-left: 0; }
-    .recipe-card ul.ingredients li, .forms ul.ingredients li {
-      padding-left: 1em; }
-  .recipe-card ol.recipe-directions, .forms ol.recipe-directions {
-    list-style-position: inside;
-    padding-left: 0; }
-    .recipe-card ol.recipe-directions li, .forms ol.recipe-directions li {
-      padding-left: 1em; }
-      .recipe-card ol.recipe-directions li::before, .forms ol.recipe-directions li::before {
-        content: "";
-        display: list-item;
-        list-style-type: decimal; }
-
-.recipe-box-container {
-  margin: 100px auto;
-  width: 30em;
-  position: relative; }
-  .recipe-box-container .recipe-card, .recipe-box-container .forms {
-    margin: 0;
-    width: 100%; }
-  .recipe-box-container .recipe {
-    position: absolute;
-    bottom: 1rem;
-    font: inherit;
-    font-size: 1rem;
-    box-shadow: 0 3px 0 0 #C8D5B9;
-    background: #FEFBF7;
-    border-radius: 5px;
-    text-shadow: 0 1px #717C89;
-    cursor: pointer;
-    padding: .2rem; }
-    .recipe-box-container .recipe:active {
-      background: #FEFBF7;
-      filter: hue-rotate(180deg); }
-    .recipe-box-container .recipe.save {
-      right: 1rem; }
-    .recipe-box-container .recipe.search {
-      right: 5rem; }
-
-.forms {
-  margin: 100px auto;
-  text-align: center;
-  position: relative; }
-  .forms::before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border-bottom: #c99da5 1px solid;
-    width: 99%;
-    height: 2em;
-    z-index: 1; }
-  .forms::after {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    width: 99%;
-    height: 87%;
-    top: 2em;
-    background: repeating-linear-gradient(180deg, #b5d8db, #b5d8db 1px, transparent 1px, transparent 1.5em); }
-  .forms > * {
-    display: inline-block;
-    z-index: 1; }
-  .forms form {
-    position: relative; }
-  .forms .tab h4 {
-    text-align: center;
-    margin: .25em;
-    display: inline-block; }
-  .forms p {
-    position: relative;
-    margin: 1em; }
-  .forms label {
-    display: block;
-    color: #4F4C36; }
-  .forms .login,
-  .forms .register {
-    display: none; }
-  .forms .requirement-left,
-  .forms .requirement-right {
-    border-radius: 5px;
-    text-align: center;
-    position: absolute;
-    background: #c99da5;
-    padding: 7px 10px;
-    color: #f8faf5;
-    bottom: 1em;
-    width: 100%;
-    transform-origin: center;
-    transform: translateY(50%); }
-  .forms .requirement-left {
-    right: 105%; }
-  .forms .requirement-right {
-    left: 105%; }
-  .forms .requirement-left:after,
-  .forms .requirement-right:after {
-    border: solid transparent;
-    content: "";
-    height: 0;
-    width: 0;
-    position: absolute;
-    top: 50%;
-    pointer-events: none;
-    border-width: 8px;
-    margin-top: -8px; }
-  .forms .requirement-right:after {
-    right: 100%;
-    border-right-color: #c99da5; }
-  .forms .requirement-left:after {
-    left: 100%;
-    border-left-color: #c99da5; }
-  .forms input,
-  .forms input[type="password"],
-  .forms input[type="email"],
-  .forms input[type="text"] {
-    opacity: 1;
-    position: relative;
-    margin: 0;
-    font-size: 1em;
-    outline: none;
-    padding: .5em;
-    background: #f5f5f5;
-    -webkit-box-shadow: 0px 0px 0px 1px #e5e5e5;
-    -moz-box-shadow: 0px 0px 0px 1px #e5e5e5;
-    box-shadow: 0px 0px 0px 1px #e5e5e5;
-    border-radius: 5px; }
-  .forms input[type="submit"],
-  .forms input[type="button"],
-  .forms button {
-    font: inherit;
-    width: 100%;
-    box-shadow: 0 3px 0 0 #C8D5B9;
-    background: #FEFBF7;
-    text-shadow: 0 1px #717C89;
-    cursor: pointer;
-    display: block;
-    margin: 1em 0;
-    padding: 1.2em 0; }
-    .forms input[type="submit"]:active,
-    .forms input[type="button"]:active,
-    .forms button:active {
-      filter: hue-rotate(180deg); }
-
-.results-container {
-  margin: 25px auto;
-  width: 30em; }
-  .results-container .recipe-card, .results-container .forms {
-    margin: 0; }
-
-* {
-  box-sizing: border-box; }
-
-html {
-  height: 100vh;
-  font-size: 25px; }
-
-body {
-  min-height: 100vh; }
-  body::before {
-    position: fixed;
-    content: '';
-    background: url("/./images/background/food.png");
-    min-height: 100vh;
-    width: 100vw;
-    filter: saturate(10%) hue-rotate(115deg);
-    -webkit-animation: scroll 30s linear infinite;
-    -moz-animation: scroll 30s linear infinite;
-    animation: scroll 30s linear infinite; }
-
-/*# sourceMappingURL=main.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"...dding: 1.2em 0;\": expected \"}\", was \"\"\A         on line 133 of partials/_forms.scss\A         from line 7 of main.scss\A \A 128: 		text-shadow: 0 1px #717C89;\A 129: 		cursor: pointer;\A 130: 		display: block;\A 131: 		margin: 1em 0;\A 132: 		padding: 1.2em 0;"; }
