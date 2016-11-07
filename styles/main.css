@@ -102,26 +102,26 @@ table {
       font: inherit;
       text-overflow: ellipsis;
       text-align: center; }
-  .recipe-card input, .forms input, .recipe-card select, .forms select {
+  .recipe-card input, .forms input, .recipe-card select, .forms select, .recipe-card button, .forms button {
     border: none;
     padding-top: 0;
     padding-bottom: 0;
     background: transparent;
     text-shadow: inherit; }
-    .recipe-card input:focus, .forms input:focus, .recipe-card select:focus, .forms select:focus {
+    .recipe-card input:focus, .forms input:focus, .recipe-card select:focus, .forms select:focus, .recipe-card button:focus, .forms button:focus {
       outline: none;
       background: rgba(255, 255, 255, 0.5);
       -webkit-box-shadow: inset 0px 0px 16px 2px rgba(177, 134, 43, 0.25);
       -moz-box-shadow: inset 0px 0px 16px 2px rgba(177, 134, 43, 0.25);
       box-shadow: inset 0px 0px 16px 2px rgba(177, 134, 43, 0.25); }
-    .recipe-card input.quantity, .forms input.quantity, .recipe-card select.quantity, .forms select.quantity {
+    .recipe-card input.quantity, .forms input.quantity, .recipe-card select.quantity, .forms select.quantity, .recipe-card button.quantity, .forms button.quantity {
       width: 2em;
       text-align: center; }
-    .recipe-card input.text, .forms input.text, .recipe-card select.text, .forms select.text {
+    .recipe-card input.text, .forms input.text, .recipe-card select.text, .forms select.text, .recipe-card button.text, .forms button.text {
       width: 100%; }
-    .recipe-card input.step, .forms input.step, .recipe-card select.step, .forms select.step {
+    .recipe-card input.step, .forms input.step, .recipe-card select.step, .forms select.step, .recipe-card button.step, .forms button.step {
       width: 100%; }
-    .recipe-card input:invalid, .forms input:invalid, .recipe-card select:invalid, .forms select:invalid {
+    .recipe-card input:invalid, .forms input:invalid, .recipe-card select:invalid, .forms select:invalid, .recipe-card button:invalid, .forms button:invalid {
       opacity: .5;
       text-shadow: 0px 1px 2px #8c8c8c; }
   .recipe-card li.recipe-line, .forms li.recipe-line {
@@ -132,9 +132,9 @@ table {
     height: 1.5em;
     line-height: 1em;
     align-items: baseline; }
-    .recipe-card li.recipe-line:first-child, .forms li.recipe-line:first-child {
+    .recipe-card li.recipe-line:nth-child(2), .forms li.recipe-line:nth-child(2) {
       border-top: 1px #c99da5 solid; }
-    .recipe-card li.recipe-line:first-child.steps, .forms li.recipe-line:first-child.steps, .recipe-card li.recipe-line:first-child.ingredient, .forms li.recipe-line:first-child.ingredient {
+    .recipe-card li.recipe-line:nth-child(2).steps, .forms li.recipe-line:nth-child(2).steps, .recipe-card li.recipe-line:nth-child(2).ingredient, .forms li.recipe-line:nth-child(2).ingredient {
       border-top: none; }
     .recipe-card li.recipe-line::after, .forms li.recipe-line::after {
       content: '';
@@ -162,32 +162,34 @@ table {
       padding-left: 1em; }
       .recipe-card ol.recipe-directions li::before, .forms ol.recipe-directions li::before {
         content: "";
-        display: list-item; }
+        display: list-item;
+        list-style-type: decimal; }
 
 .recipe-box-container {
   margin: 100px auto;
-  width: 30em; }
+  width: 30em;
+  position: relative; }
   .recipe-box-container .recipe-card, .recipe-box-container .forms {
     margin: 0;
     width: 100%; }
-  .recipe-box-container input[type="submit"],
-  .recipe-box-container input[type="button"] {
-    height: auto;
-    width: auto;
+  .recipe-box-container .recipe {
+    position: absolute;
+    bottom: 1rem;
+    font: inherit;
+    font-size: 1rem;
     box-shadow: 0 3px 0 0 #C8D5B9;
     background: #FEFBF7;
     border-radius: 5px;
-    border: none;
-    outline: none;
     text-shadow: 0 1px #717C89;
     cursor: pointer;
-    display: block;
-    line-height: 1.6em;
-    margin: 1em 0;
-    padding: 0.8em 0; }
-    .recipe-box-container input[type="submit"]:active,
-    .recipe-box-container input[type="button"]:active {
+    padding: .2rem; }
+    .recipe-box-container .recipe:active {
+      background: #FEFBF7;
       filter: hue-rotate(180deg); }
+    .recipe-box-container .recipe.save {
+      right: 1rem; }
+    .recipe-box-container .recipe.search {
+      right: 5rem; }
 
 .forms {
   margin: 100px auto;
@@ -270,6 +272,7 @@ table {
   .forms input[type="password"],
   .forms input[type="email"],
   .forms input[type="text"] {
+    opacity: 1;
     position: relative;
     margin: 0;
     font-size: 1em;
@@ -281,20 +284,20 @@ table {
     box-shadow: 0px 0px 0px 1px #e5e5e5;
     border-radius: 5px; }
   .forms input[type="submit"],
-  .forms input[type="button"] {
+  .forms input[type="button"],
+  .forms button {
+    font: inherit;
+    width: 100%;
     box-shadow: 0 3px 0 0 #C8D5B9;
     background: #FEFBF7;
-    border-radius: 5px;
-    border: none;
-    outline: none;
     text-shadow: 0 1px #717C89;
     cursor: pointer;
     display: block;
-    line-height: 1.6em;
     margin: 1em 0;
-    padding: 0.8em 0; }
+    padding: 1.2em 0; }
     .forms input[type="submit"]:active,
-    .forms input[type="button"]:active {
+    .forms input[type="button"]:active,
+    .forms button:active {
       filter: hue-rotate(180deg); }
 
 .results-container {

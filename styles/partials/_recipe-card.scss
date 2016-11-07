@@ -68,7 +68,7 @@ $card-fontcolor: #4F4C36;
   }
 
 //general input properties:
-  input, select {
+  input, select, button {
     //hide in line:
     border: none;
     padding-top: 0;
@@ -101,7 +101,7 @@ $card-fontcolor: #4F4C36;
 
     &:invalid {
       opacity: .5;
-      text-shadow: 0px 1px 2px #8c8c8c;  
+      text-shadow: 0px 1px 2px #8c8c8c;
     }
   }
 

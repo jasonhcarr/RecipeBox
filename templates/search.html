@@ -34,7 +34,7 @@
              <li ng-repeat="ingredient in result.ingredients track by $index" class="recipe-line ingredient">
                <input ng-required="true" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
                <select class="select">
-                 <option>{{ingredient.measure}}</option> 
+                 <option>{{ingredient.measure}}</option>
                <input class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
              </li>
            </ul>
