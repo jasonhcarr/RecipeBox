@@ -6,7 +6,7 @@
 	position: relative;
 
 	&::before {
-		@include psuedo();
+		@include pseudo();
 		border-bottom: $card-red 1px solid;
 		width: 99%;
 		height: 2em;
@@ -14,7 +14,7 @@
 	}
 
 	&::after {
-		@include psuedo();
+		@include pseudo();
 		width: 99%;
 		height: 87%;
 		top: 2em;
@@ -119,26 +119,20 @@
 
 	input[type="submit"],
 	input[type="button"] {
-	  width: 100%;
 		box-shadow: 0 3px 0 0 #C8D5B9;
 		background: #FEFBF7;
 		border-radius: 5px;
 		border: none;
-		// color: $card-red;
 		outline: none;
 		text-shadow: 0 1px #717C89;
-
-	  &:active {
-	    filter: hue-rotate(180deg);
-	  }
-	}
-
-	input[type="button"],
-	input[type="submit"] {
 		cursor: pointer;
 		display: block;
 		line-height: 1.6em;
 		margin: 1em 0;
 		padding: 0.8em 0;
+
+	  &:active {
+	    filter: hue-rotate(180deg);
+	  }
 	}
 }
