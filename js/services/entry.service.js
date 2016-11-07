@@ -1,7 +1,6 @@
 RecipeBox.service('EntryService', function($http, $state) {
     function registerUser(data) {
         data = angular.toJson(data);
-        console.log(data);
         var settings = {
           "async": true,
           "crossDomain": true,
@@ -36,7 +35,6 @@ RecipeBox.service('EntryService', function($http, $state) {
 
     function loginUser(data) {
       // data = angular.toJson(data);
-      console.log(data);
       var settings = {
         "async": true,
         "crossDomain": true,

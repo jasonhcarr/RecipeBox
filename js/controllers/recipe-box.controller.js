@@ -2,6 +2,7 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
 
     $scope.recipe = {
         name: "New Recipe",
+        id: "",
         userId: null,
         ingredients: [{
             name: "",
@@ -15,6 +16,26 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
         parent: null,
         children: []
     };
+
+    function resetForm() {
+      $scope.newRecipe.$setPristine();
+      $scope.recipe = {
+          name: "New Recipe",
+          id: "",
+          userId: null,
+          ingredients: [{
+              name: "",
+              quantity: 0,
+              measure: ""
+          }],
+          yield: null,
+          instructions: [{
+              Step: ""
+          }],
+          parent: null,
+          children: []
+      };
+    }
 
     $scope.newIngredient = function(event) {
       var form = $(this).parents('form:eq(0)'),
@@ -53,7 +74,10 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
     };
 
     $scope.createNewRecipe = function() {
+        $scope.recipe.id = Date.now();
+        console.log($scope.recipe.id);
         RecipeService.dummyCreate($scope.recipe);
+        resetForm();
     };
 
 });

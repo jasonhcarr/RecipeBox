@@ -1,7 +1,7 @@
 RecipeBox.service('RecipeService', function($http) {
+  
     function createRecipe(recipe) {
       data = angular.toJson(data);
-      console.log(recipe);
         var settings = {
             "async": true,
             "crossDomain": true,
