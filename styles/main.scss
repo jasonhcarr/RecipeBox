@@ -1,4 +1,5 @@
 @import 'bourbon/bourbon';
+@import 'partials/animations';
 @import 'partials/mixins';
 @import 'partials/recipe-card';
 @import 'partials/recipe-box';
@@ -24,5 +25,6 @@ body {
     min-height: 100vh;
     width: 100vw;
     filter: saturate(10%) hue-rotate(115deg);
+    @include animation(scroll 30s linear infinite);
   }
 }
