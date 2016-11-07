@@ -13,10 +13,10 @@
   <div class="results-container">
      <section ng-repeat="result in results" class="result">
        <ul class="recipe-card">
+         <form name="new-recipe" method="POST">
          <span class="tab">
            <input type="text" value="{{result.name}}"></input>
          </span>
-         <form name="new-recipe" method="POST">
            <li class="recipe-line"></li>
 
            <li class="recipe-line yield">
