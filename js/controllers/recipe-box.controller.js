@@ -5,8 +5,8 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
         userId: null,
         ingredients: [{
             name: "",
-            quantity: 0,
-            measure: ""
+            quantity: null,
+            measure: null
         }],
         yield: null,
         instructions: [{
@@ -27,8 +27,8 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
           }
           $scope.recipe.ingredients.push({
               name: "",
-              quantity: 0,
-              measure: ""
+              quantity: null,
+              measure: null
           });
       }
 
