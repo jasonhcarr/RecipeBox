@@ -1,3 +1,4 @@
+@import 'partials/setup/reset';
 @import 'bourbon/bourbon';
 @import 'partials/animations';
 @import 'partials/mixins';
@@ -5,7 +6,6 @@
 @import 'partials/recipe-box';
 @import 'partials/forms';
 @import 'partials/search';
-@import 'partials/setup/reset';
 
 * {
   box-sizing: border-box;
