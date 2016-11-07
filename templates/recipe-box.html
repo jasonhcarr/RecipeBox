@@ -1,9 +1,9 @@
 <div class="recipe-box-container">
   <ul ng-cloak="true" class="recipe-card">
-    <span class="tab">
-      <input ng-model="recipe.name" type="text">{{recipe.name}}</input>
-    </span>
     <form ng-submit="createNewRecipe()" name="new-recipe" method="POST">
+    <span class="tab">
+      <input ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
+    </span>
       <li class="recipe-line"></li>
 
       <li class="recipe-line yield">
@@ -18,7 +18,7 @@
       </li>
 
       <ul class="ingredients">
-        <li ng-repeat="ingredient in recipe.ingredients" class="recipe-line ingredient">
+        <li ng-repeat="ingredient in recipe.ingredients track by $index" class="recipe-line ingredient">
           <input ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
           <select ng-model="ingredient.measure" class="select" type="select">
             <option selected disabled>Measurement</option>
@@ -27,7 +27,7 @@
             <option>Cups</option>
             <option>Ounces</option>
           </select>
-          <input ng-model="ingredient.name" ng-keydown="newLine($event)" class="text" type="text" value="{{ingredient.name}}"></input>
+          <input ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}"></input>
         </li>
       </ul>
 
@@ -38,13 +38,15 @@
       </li>
 
       <ol class="recipe-directions">
-        <li ng-repeat="direction in recipe.instructions" class="recipe-line steps">
-          <input ng-model="direction.Step" class="step" type="text" placeholder="step" value="{{direction.Step}}"></input>
+        <li ng-repeat="direction in recipe.instructions  track by $index" class="recipe-line steps">
+          <input ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="step" value="{{direction.Step}}"></input>
         </li>
       </ol>
 
       <li class="recipe-line"></li>
-
+    <li class="recipe-line">
+    <input type="submit" name="name" value="Share Your Recipe"></input>
+    </li>
     </form>
   </ul>
   <h1>Create A New Recipe</h1>

@@ -1,0 +1,167 @@
+***** Search Recipes:
+
+  GET: /api/recipes //or whatever
+
+    input:
+    {
+      "query": "String"
+    }
+
+    action:
+      -search entire recipe database by query name
+      -return results
+      -possibly sorted by different parameters? what do you think?
+        -by number of forks
+        -by relevance to search string
+        -by category?? (we don't have categories yet tho)
+
+    output:
+    {
+      [
+        {recipe object}, // see recipe object reference at end of file
+        {recipe object},
+        {recipe object},
+        {recipe object},
+      ]
+    }
+
+***** Create Recipe:
+
+POST: /api/recipes/new //or whatever
+
+  input: {
+
+    "userId": "Number", //id of the user that created this (we provide this)
+    "name": "//string",
+    "ingredientName": [
+      "String",
+      "String",
+      "String"
+    ],
+    "ingredientQuantity": [
+      "Int",
+      "Int",
+      "Int"
+    ],
+    "ingredientMeasure": [
+      "String",
+      "String",
+      "String"
+    ],
+    "yield": "number",
+    "instructions":
+    [
+      "String",
+      "String",
+      "String",
+      "String",
+      "String",
+      "String"
+    ], //etc
+    "parent": [
+      "recipeId",
+      "nickname"
+    ]
+  }
+
+	actions:
+	-store new recipe in database
+	-add recipe ID and name to user profile
+
+	output:
+		{
+			"recipeId": "String", //this is the ID of the newly created recipe
+			"name": "String"
+		}
+
+* Edit Recipe:
+
+  PUT: /api/recipes/edit //or whatever
+
+  input: {
+
+		"userId": "Number", //id of the user that created this (we provide this)
+    "name": "//string",
+    "ingredientName": [
+      "String",
+      "String",
+      "String"
+    ],
+    "ingredientQuantity": [
+      "Int",
+      "Int",
+      "Int"
+    ],
+    "ingredientMeasure": [
+      "String",
+      "String",
+      "String"
+    ],
+    "yield": "number",
+    "instructions":
+    [
+      "String",
+      "String",
+      "String",
+      "String",
+      "String",
+      "String"
+    ], //etc
+		"parent": [
+			"recipeId",
+			"nickname"
+		]
+  }
+
+  actions:
+    -replace current recipe by provided ID with provided parameters
+
+  response:
+    -none
+
+* Delete Recipe:
+
+  DELETE /api/recipes/delete //or whatever
+
+  input {
+    "recipeId": "string",
+  }
+
+  action:
+    -delete from recipe database
+    -delete from user profile
+    -delete from any parent recipes (ask me about this!)
+
+* View User:
+
+	GET /api/users/ //or whatever
+
+		input:
+		{
+			"userId": "Int"
+		}
+
+		action:
+		-get one user profile as defined below by userId:
+
+		output:
+        {
+					"userId": "int",
+					"name": "String",
+          "recipes": []
+				}
+			]
+
+
+REFERENCE:
+~Recipe~ Object: // for reference
+  {
+    "name": "String",
+		"userId": "String",
+    "recipeId": "Number",
+    "children": [],
+		"parent": "",
+    "ingredients": [],
+    "yield": "number",
+    "instructions": []
+  }
