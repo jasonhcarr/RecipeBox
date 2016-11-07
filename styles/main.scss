@@ -21,7 +21,7 @@ body {
   &::before {
     position: fixed;
     content: '';
-    background: url("/./images/background/food.png");
+    background: url("../images/background/food.png");
     min-height: 100vh;
     width: 100vw;
     filter: saturate(10%) hue-rotate(115deg);
