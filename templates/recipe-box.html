@@ -4,6 +4,7 @@
     <span class="tab">
       <input ng-required="true" ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
     </span>
+
       <li class="recipe-line"></li>
 
       <li class="recipe-line yield">
@@ -20,11 +21,11 @@
       <ul class="ingredients">
         <li ng-repeat="ingredient in recipe.ingredients track by $index" class="recipe-line ingredient">
           <input ng-required="true" ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}" placeholder="..."></input>
-          <select class="select" ng-model="ingredient.measure" ng-options="opt for opt in ['Tsp', 'Tbsp', 'Cups', 'Ounces']" type="select" required>
+          <select required class="select" ng-model="ingredient.measure" ng-options="opt for opt in ['Tsp', 'Tbsp', 'Cups', 'Ounces']" type="select" required>
             <option value='' disabled>...</option>
             <option></option>
           </select>
-          <input title="Press enter to add another ingredient" ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
+          <input title="Press enter to add another ingredient" ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="..."></input>
         </li>
       </ul>
 
@@ -51,5 +52,6 @@
 
   </ul>
 
+  <input type="submit" name="name" value="Share Your Recipe"></input>
 
 </div>
