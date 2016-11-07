@@ -1,16 +1,16 @@
 /*
 Error: Invalid CSS after "}": expected "}", was ""
-        on line 54 of partials/_recipe-box.scss
+        on line 56 of partials/_recipe-box.scss
         from line 6 of main.scss
 
-49:     &:active {
-50:       filter: hue-rotate(180deg);
-51:     }
-52:   }
-53: }
+51:     &.search{
+52:       right: 5rem;
+53:     }
+54:   }
+55: }
 
 Backtrace:
-partials/_recipe-box.scss:54
+partials/_recipe-box.scss:56
 main.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
@@ -65,4 +65,4 @@ main.scss:6
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 54 of partials/_recipe-box.scss\A         from line 6 of main.scss\A \A 49:     &:active {\A 50:       filter: hue-rotate(180deg);\A 51:     }\A 52:   }\A 53: }"; }
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 56 of partials/_recipe-box.scss\A         from line 6 of main.scss\A \A 51:     &.search{\A 52:       right: 5rem;\A 53:     }\A 54:   }\A 55: }"; }

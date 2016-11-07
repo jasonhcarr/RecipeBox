@@ -37,17 +37,19 @@
     box-shadow: 0 3px 0 0 #C8D5B9;
     background: #FEFBF7;
     border-radius: 5px;
-    border: none;
-    outline: none;
     text-shadow: 0 1px #717C89;
     cursor: pointer;
-    display: block;
-    line-height: 1.6em;
-    margin: 1em 0;
-    padding: 0.8em 0;
+    padding: .2rem;
 
     &:active {
+      background: #FEFBF7;
       filter: hue-rotate(180deg);
+    }
+    &.save{
+      right: 1rem;
+    }
+    &.search{
+      right: 5rem;
     }
   }
 }
