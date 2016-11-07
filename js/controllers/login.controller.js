@@ -10,7 +10,6 @@ RecipeBox.controller('LoginController', function ($state, $scope, EntryService, 
   };
 
   $scope.validEmail = function () {
-    console.log($scope.login.email);
     // VerifyService.email(email);
   };
 

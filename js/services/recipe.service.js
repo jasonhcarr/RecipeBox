@@ -1,5 +1,5 @@
 RecipeBox.service('RecipeService', function($http) {
-  
+
     function createRecipe(recipe) {
       data = angular.toJson(data);
         var settings = {
@@ -17,7 +17,6 @@ RecipeBox.service('RecipeService', function($http) {
         };
 
         $.ajax(settings).done(function(response) {
-            console.log(response);
         });
     }
 

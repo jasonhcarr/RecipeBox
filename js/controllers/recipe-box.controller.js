@@ -75,7 +75,6 @@ RecipeBox.controller('RecipeBoxController', function($scope, $state, RecipeServi
 
     $scope.createNewRecipe = function() {
         $scope.recipe.id = Date.now();
-        console.log($scope.recipe.id);
         RecipeService.dummyCreate($scope.recipe);
         resetForm();
     };

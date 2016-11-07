@@ -18,13 +18,11 @@ RecipeBox.service('EntryService', function($http, $state) {
         $.ajax(settings).done(function (response) {
            return response;
         });          // data = delete date.name;
-          // console.log(data);
           // $http({
           //   method: 'POST',
           //   url: 'https://recipe-box-api2.herokuapp.com/authenticate',
           //   headers: data
           // }).then(function getAuthToken() {
-          //   console.log(response);
           //   $state.go('recipe-box.box');
           // });
         // }, function errorCallback(response) {
