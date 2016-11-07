@@ -1,7 +1,28 @@
 .recipe-box-container {
-  margin: 25px auto;
+  margin: 100px auto;
   width: $card-width;
   .recipe-card {
     margin: 0;
+    width: 100%;
+  }
+  input[type="submit"],
+  input[type="button"] {
+    height: auto;
+    width: auto;
+    box-shadow: 0 3px 0 0 #C8D5B9;
+    background: #FEFBF7;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    text-shadow: 0 1px #717C89;
+    cursor: pointer;
+    display: block;
+    line-height: 1.6em;
+    margin: 1em 0;
+    padding: 0.8em 0;
+
+    &:active {
+      filter: hue-rotate(180deg);
+    }
   }
 }
