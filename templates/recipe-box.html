@@ -8,7 +8,7 @@
 
       <li class="recipe-line yield">
         <h4>Serves: </h4>
-        <input ng-required="true" ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}"></input>
+        <input ng-required="true" ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}" placeholder="..."></input>
       </li>
 
       <li class="recipe-line"></li>
@@ -19,9 +19,9 @@
 
       <ul class="ingredients">
         <li ng-repeat="ingredient in recipe.ingredients track by $index" class="recipe-line ingredient">
-          <input ng-required="true" ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
+          <input ng-required="true" ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}" placeholder="..."></input>
           <select class="select" ng-model="ingredient.measure" ng-options="opt for opt in ['Tsp', 'Tbsp', 'Cups', 'Ounces']" type="select" required>
-            <option value=''>Measurement</option>
+            <option value='' disabled>...</option>
             <option></option>
           </select>
           <input title="Press enter to add another ingredient" ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
@@ -36,15 +36,16 @@
 
       <ol class="recipe-directions">
         <li ng-repeat="direction in recipe.instructions track by $index" class="recipe-line steps">
-          <input title="Press enter to add another step" ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="Step..." value="{{direction.Step}}"></input>
+          <input title="Press enter to add another step" ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="..." value="{{direction.Step}}"></input>
         </li>
       </ol>
 
       <li class="recipe-line"></li>
-    <li class="recipe-line">
-    <input type="submit" name="name" value="Share Your Recipe"></input>
-    </li>
+
     </form>
+
   </ul>
-  <h1>Create A New Recipe</h1>
+
+  <input type="submit" name="name" value="Share Your Recipe"></input>
+
 </div>
