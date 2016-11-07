@@ -176,6 +176,7 @@ $card-fontcolor: #4F4C36;
       &::before {
         content: "";
         display: list-item;
+        list-style-type: decimal;
       }
     }
   }
