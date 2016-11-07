@@ -1,25 +1,21 @@
 /*
-Error: Invalid CSS after "...dding: 1.2em 0;": expected "}", was ""
-        on line 133 of partials/_forms.scss
-        from line 7 of main.scss
+Error: Invalid CSS after "}": expected "}", was ""
+        on line 54 of partials/_recipe-box.scss
+        from line 6 of main.scss
 
-128: 		text-shadow: 0 1px #717C89;
-129: 		cursor: pointer;
-130: 		display: block;
-131: 		margin: 1em 0;
-132: 		padding: 1.2em 0;
+49:     &:active {
+50:       filter: hue-rotate(180deg);
+51:     }
+52:   }
+53: }
 
 Backtrace:
-partials/_forms.scss:133
-main.scss:7
+partials/_recipe-box.scss:54
+main.scss:6
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1189:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1125:in `expected'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:1120:in `tok!'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:658:in `block'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:726:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:676:in `block_child'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:668:in `block_contents'
-/Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:657:in `block'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:649:in `ruleset'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:675:in `block_child'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.22/lib/sass/scss/parser.rb:665:in `block_contents'
@@ -69,4 +65,4 @@ main.scss:7
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Invalid CSS after \"...dding: 1.2em 0;\": expected \"}\", was \"\"\A         on line 133 of partials/_forms.scss\A         from line 7 of main.scss\A \A 128: 		text-shadow: 0 1px #717C89;\A 129: 		cursor: pointer;\A 130: 		display: block;\A 131: 		margin: 1em 0;\A 132: 		padding: 1.2em 0;"; }
+  content: "Error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 54 of partials/_recipe-box.scss\A         from line 6 of main.scss\A \A 49:     &:active {\A 50:       filter: hue-rotate(180deg);\A 51:     }\A 52:   }\A 53: }"; }
