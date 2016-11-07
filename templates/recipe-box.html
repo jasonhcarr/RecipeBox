@@ -24,7 +24,7 @@
             <option value=''>Measurement</option>
             <option></option>
           </select>
-          <input ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
+          <input title="Press enter to add another ingredient" ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
         </li>
       </ul>
 
@@ -36,7 +36,7 @@
 
       <ol class="recipe-directions">
         <li ng-repeat="direction in recipe.instructions track by $index" class="recipe-line steps">
-          <input ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="Step..." value="{{direction.Step}}"></input>
+          <input title="Press enter to add another step" ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="Step..." value="{{direction.Step}}"></input>
         </li>
       </ol>
 

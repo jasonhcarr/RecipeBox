@@ -14,7 +14,7 @@
        <ul class="recipe-card">
          <form ng-submit="forkRecipe()" name="recipe" method="POST">
          <span class="tab">
-           <input ng-required="true" type="text" ng-model="result.name" value="{{result.name}}"></input>
+           <input ng-required="true" type="text" value="{{result.name}}"></input>
          </span>
            <li class="recipe-line"></li>
 
@@ -32,8 +32,9 @@
            <ul class="ingredients">
              <li ng-repeat="ingredient in result.ingredients track by $index" class="recipe-line ingredient">
                <input ng-required="true" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
-               <input type="text" value="{{ingredient.measure}} " readonly></input>
-               <input title="Press enter to add another ingredient" ng-required="true" ng-model="ingredient.name" class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
+               <select class="select">
+                 <option>{{ingredient.measure}}</option> 
+               <input class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
              </li>
            </ul>
 
@@ -45,7 +46,7 @@
 
            <ol class="recipe-directions">
              <li ng-repeat="direction in result.instructions track by $index" class="recipe-line steps">
-               <input ng-model="direction.Step" class="step" type="text" placeholder="Step..." value="{{direction.Step}}"></input>
+               <input class="step" type="text" placeholder="Step..." value="{{direction.Step}}"></input>
              </li>
            </ol>
 
