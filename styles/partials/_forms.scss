@@ -130,3 +130,9 @@
 		display: block;
 		margin: 1em 0;
 		padding: 1.2em 0;
+
+	  &:active {
+	    filter: hue-rotate(180deg);
+	  }
+	}
+}
