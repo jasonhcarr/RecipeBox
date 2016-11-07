@@ -1,14 +1,15 @@
 <div class="recipe-box-container">
   <ul ng-cloak="true" class="recipe-card">
     <form ng-submit="createNewRecipe()" name="new-recipe" method="POST">
-    <span class="tab">
-      <input ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
-    </span>
+      <span class="tab">
+        <input ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
+      </span>
+
       <li class="recipe-line"></li>
 
       <li class="recipe-line yield">
         <h4>Serves: </h4>
-        <input ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}"></input>
+        <input ng-model="recipe.yield" class="quantity" type="number" value="{{recipe.yield}}" placeholder="..."></input>
       </li>
 
       <li class="recipe-line"></li>
@@ -19,15 +20,15 @@
 
       <ul class="ingredients">
         <li ng-repeat="ingredient in recipe.ingredients track by $index" class="recipe-line ingredient">
-          <input ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
-          <select ng-model="ingredient.measure" class="select" type="select">
-            <option selected disabled>Measurement</option>
+          <input ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}" placeholder="..."></input>
+          <select required ng-model="ingredient.measure" class="select" type="select">
+            <option value="" disabled>...</option>
             <option>Tsp</option>
             <option>Tbsp</option>
             <option>Cups</option>
             <option>Ounces</option>
           </select>
-          <input ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}"></input>
+          <input ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="..."></input>
         </li>
       </ul>
 
@@ -39,15 +40,16 @@
 
       <ol class="recipe-directions">
         <li ng-repeat="direction in recipe.instructions  track by $index" class="recipe-line steps">
-          <input ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="step" value="{{direction.Step}}"></input>
+          <input ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="..." value="{{direction.Step}}" placeholder="..."></input>
         </li>
       </ol>
 
       <li class="recipe-line"></li>
-    <li class="recipe-line">
-    <input type="submit" name="name" value="Share Your Recipe"></input>
-    </li>
+
     </form>
+
   </ul>
-  <h1>Create A New Recipe</h1>
+
+  <input type="submit" name="name" value="Share Your Recipe"></input>
+
 </div>
