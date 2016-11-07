@@ -1,5 +1,5 @@
 <div class="recipe-box-container">
-  <ul ng-cloak="true" class="recipe-card">
+  <ul class="recipe-card">
     <form ng-submit="createNewRecipe()" name="newRecipe" method="POST">
     <span class="tab">
       <input ng-required="true" ng-model="recipe.name" type="text" value="{{recipe.name}}"></input>
@@ -21,9 +21,10 @@
         <li ng-repeat="ingredient in recipe.ingredients track by $index" class="recipe-line ingredient">
           <input ng-required="true" ng-model="ingredient.quantity" class="quantity" type="number" value="{{ingredient.quantity}}"></input>
           <select class="select" ng-model="ingredient.measure" ng-options="opt for opt in ['Tsp', 'Tbsp', 'Cups', 'Ounces']" type="select" required>
+            <option value=''>Measurement</option>
             <option></option>
           </select>
-          <input ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}"></input>
+          <input ng-required="true" ng-model="ingredient.name" ng-keydown="newIngredient($event)" class="text" type="text" value="{{ingredient.name}}" placeholder="Ingredient"></input>
         </li>
       </ul>
 
@@ -34,8 +35,8 @@
       </li>
 
       <ol class="recipe-directions">
-        <li ng-repeat="direction in recipe.instructions  track by $index" class="recipe-line steps">
-          <input ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="step" value="{{direction.Step}}"></input>
+        <li ng-repeat="direction in recipe.instructions track by $index" class="recipe-line steps">
+          <input ng-keydown="newDirection($event)" ng-model="direction.Step" class="step" type="text" placeholder="Step..." value="{{direction.Step}}"></input>
         </li>
       </ol>
 
